@@ -50,6 +50,13 @@ require("lazy").setup({
         opts = {} -- this is equalent to setup({}) function
     },
     {"nvim-lualine/lualine.nvim",url="https://github.com/nvim-lualine/lualine.nvim"},
-    {"lukas-reineke/indent-blankline.nvim",url="https://github.com/lukas-reineke/indent-blankline.nvim"},
     {"lewis6991/gitsigns",url="https://github.com/lewis6991/gitsigns.nvim"},
+   
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
+    },
 })
