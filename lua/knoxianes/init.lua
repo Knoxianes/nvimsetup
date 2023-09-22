@@ -54,6 +54,7 @@ require("lazy").setup({
         event = "InsertEnter",
         opts = {} -- this is equalent to setup({}) function
     },
+    {"nvim-tree/nvim-web-devicons",url="https://github.com/nvim-tree/nvim-web-devicons"},
     {"nvim-lualine/lualine.nvim",url="https://github.com/nvim-lualine/lualine.nvim"},
     {"lewis6991/gitsigns",url="https://github.com/lewis6991/gitsigns.nvim"},
    
