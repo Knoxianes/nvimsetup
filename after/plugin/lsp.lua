@@ -4,7 +4,9 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	'tsserver',
-	'rust_analyzer',
+    'eslint',
+    'lua_ls',
+    'tailwindcss',
 })
 
 lsp.nvim_workspace()
