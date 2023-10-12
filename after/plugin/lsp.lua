@@ -7,6 +7,8 @@ lsp.ensure_installed({
     'eslint',
     'lua_ls',
     'tailwindcss',
+    "gopls",
+    "pylsp"
 })
 
 lsp.nvim_workspace()
