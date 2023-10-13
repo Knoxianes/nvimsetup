@@ -13,7 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-    { "ThePrimeagen/vim-be-good",        url = "https://github.com/ThePrimeagen/vim-be-good" },
+    {'ThePrimeagen/vim-be-good', url="https://github.com/ThePrimeagen/vim-be-good"},
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
@@ -26,7 +26,6 @@ require("lazy").setup({
         opts = {},
     },
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    { "ThePrimeagen/harpoon",            ulr = "https://github.com/ThePrimeagen/harpoon" },
     { "mbbill/undotree",                 url = "https://github.com/mbbill/undotree" },
     { "tpope/vim-fugitive",              url = "https://github.com/tpope/vim-fugitive" },
     {
