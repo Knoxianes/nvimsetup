@@ -1,7 +1,11 @@
-require'nvim-treesitter.configs'.setup {
-  autotag = {
-    enable = true,
-  }
+local filetype = {
+    'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript',
+    'xml',
+    'php',
+    'markdown',
+    'astro', 'glimmer', 'handlebars', 'hbs'
 }
-require('nvim-ts-autotag').setup()
+require('nvim-ts-autotag').setup({
+    filetypes = filetype
+})
 
