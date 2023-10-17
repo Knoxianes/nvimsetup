@@ -9,7 +9,9 @@ lsp.ensure_installed({
     'tailwindcss',
     "gopls",
     "pylsp",
-    "html"
+    "html",
+    "jsonls",
+    "cssls",
 
 })
 
