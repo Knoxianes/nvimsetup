@@ -8,7 +8,9 @@ lsp.ensure_installed({
     'lua_ls',
     'tailwindcss',
     "gopls",
-    "pylsp"
+    "pylsp",
+    "html"
+
 })
 
 lsp.nvim_workspace()
