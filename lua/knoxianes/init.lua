@@ -13,17 +13,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
+    { "EdenEast/nightfox.nvim" },
     {'ThePrimeagen/vim-be-good', url="https://github.com/ThePrimeagen/vim-be-good"},
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 999,
-        opts = {},
     },
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "mbbill/undotree",                 url = "https://github.com/mbbill/undotree" },
