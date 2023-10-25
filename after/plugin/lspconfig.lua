@@ -25,3 +25,31 @@ lspconfig.gopls.setup {
         },
     },
 }
+lspconfig.tsserver.setup {}
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.cssls.setup {
+    capabilities = capabilities,
+}
+lspconfig.html.setup {
+    capabilities = capabilities,
+}
+lspconfig.pylsp.setup {
+    settings = {
+        pylsp = {
+            plugins = {
+                jedi_completion = {
+                    include_class_objects = true,
+                    include_function_objects = true,
+                    fuzzy = true,
+                    eager = true
+                },
+                rope_autoimport = {
+                    enable = true
+                }
+            }
+        }
+    }
+}
