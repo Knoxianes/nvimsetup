@@ -14,6 +14,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { "EdenEast/nightfox.nvim" },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {'ThePrimeagen/harpoon'},
     {'ThePrimeagen/vim-be-good', url="https://github.com/ThePrimeagen/vim-be-good"},
     {
         'nvim-telescope/telescope.nvim',
