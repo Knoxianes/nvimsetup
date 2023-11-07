@@ -100,6 +100,7 @@ local servers = {
     jsonls = {},
     cssls = {},
     sqlls = {},
+    pylsp={},
 }
 
 -- Setup neovim lua configuration
