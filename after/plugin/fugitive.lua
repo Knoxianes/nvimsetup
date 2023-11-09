@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git,{desc='Git status'})
 
 local Knoxianes_Fugitive = vim.api.nvim_create_augroup("Knoxianes_Fugitive", {})
 
