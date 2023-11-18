@@ -28,3 +28,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Disable arrow keys
+vim.keymap.set({'n','v','i'},'<Left>','<Nop>')
+vim.keymap.set({'n','v','i'},'<Right>','<Nop>')
+vim.keymap.set({'n','v','i'},'<Down>','<Nop>')
+vim.keymap.set({'n','v','i'},'<Up>','<Nop>')
+vim.keymap.set({'n','v','i'},'<PageDown>','<Nop>')
+vim.keymap.set({'n','v','i'},'<PageUp>','<Nop>')
