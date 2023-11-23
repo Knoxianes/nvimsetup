@@ -28,12 +28,8 @@ require('lazy').setup({
   { 'ThePrimeagen/harpoon' },
   { 'ThePrimeagen/vim-be-good' },
   { "mbbill/undotree"},
+  {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   { "windwp/nvim-ts-autotag",  opts={} },
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
-  },
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     -- optionally, override the default options:
