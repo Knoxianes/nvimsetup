@@ -28,7 +28,6 @@ require('lazy').setup({
   { 'ThePrimeagen/harpoon' },
   { 'ThePrimeagen/vim-be-good' },
   { "mbbill/undotree"},
-  {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
   { "windwp/nvim-ts-autotag",  opts={} },
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -192,3 +191,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Folding
+local vim = vim
+local opt = vim.opt
+
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevelstart = 99
+opt.foldenable = false
+
