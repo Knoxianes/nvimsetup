@@ -144,6 +144,11 @@ lspconfig.gopls.setup {
         },
     }
 }
+lspconfig.quick_lint_js.setup {
+    cmd = { "quick-lint-js", "--lsp-server" },
+    filetypes = {  "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    single_file_support = true
+}
 lspconfig.clangd.setup {
     cmd = { "clangd" },
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
