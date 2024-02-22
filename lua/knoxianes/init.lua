@@ -25,10 +25,11 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
+  { 'github/copilot.vim' },
   { 'ThePrimeagen/harpoon' },
   { 'ThePrimeagen/vim-be-good' },
-  { "mbbill/undotree"},
-  { "windwp/nvim-ts-autotag",  opts={} },
+  { "mbbill/undotree" },
+  { "windwp/nvim-ts-autotag",  opts = {} },
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     -- optionally, override the default options:
@@ -179,16 +180,16 @@ require('lazy').setup({
     'mfussenegger/nvim-dap',
   },
   {
-  'leoluz/nvim-dap-go',
+    'leoluz/nvim-dap-go',
   },
   {
-  'rcarriga/nvim-dap-ui',
+    'rcarriga/nvim-dap-ui',
   },
   {
-  'theHamsta/nvim-dap-virtual-text',
+    'theHamsta/nvim-dap-virtual-text',
   },
   {
-  'nvim-telescope/telescope-dap.nvim'
+    'nvim-telescope/telescope-dap.nvim'
   }
 
 }, {})
@@ -216,4 +217,3 @@ opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldlevelstart = 99
 opt.foldenable = false
-
