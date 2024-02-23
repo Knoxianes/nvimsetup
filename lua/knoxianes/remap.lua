@@ -43,4 +43,5 @@ vim.keymap.set(
   "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
