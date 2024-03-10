@@ -15,6 +15,10 @@ vim.keymap.set({ "i", "v" }, "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "LSP format" })
 
+vim.keymap.set("n", "<leader>q", "<cmd>EslintFixAll<CR>", { desc = "LSP format" })
+
+
+
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -44,4 +48,3 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-

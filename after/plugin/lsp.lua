@@ -101,7 +101,6 @@ local servers = {
     cssls = {},
     pylsp = {},
     clangd = {},
-    graphql = {},
 }
 
 -- Setup neovim lua configuration
@@ -143,11 +142,6 @@ lspconfig.gopls.setup {
             },
         },
     }
-}
-lspconfig.quick_lint_js.setup {
-    cmd = { "quick-lint-js", "--lsp-server" },
-    filetypes = {  "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-    single_file_support = true
 }
 lspconfig.clangd.setup {
     cmd = { "clangd" },
