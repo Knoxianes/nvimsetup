@@ -26,7 +26,12 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   { 'github/copilot.vim' },
-  { 'ThePrimeagen/harpoon' },
+  -- { 'ThePrimeagen/harpoon' },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
   { 'ThePrimeagen/vim-be-good' },
   { "mbbill/undotree" },
   { "windwp/nvim-ts-autotag",  opts = {} },
