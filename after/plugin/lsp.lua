@@ -129,6 +129,7 @@ mason_lspconfig.setup_handlers {
 }
 local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
+lspconfig.astro.setup {}
 lspconfig.gopls.setup {
     cmd = { "gopls" },
     filetypes = { "go", "gomod", "gowork", "gotmpl" },

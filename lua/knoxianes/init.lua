@@ -148,11 +148,6 @@ require('lazy').setup({
       "rcarriga/nvim-notify",
     }
   },
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons'
-  },
 
   {
     "catppuccin/nvim",
