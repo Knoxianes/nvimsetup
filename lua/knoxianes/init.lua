@@ -25,8 +25,11 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-  { 'github/copilot.vim' },
+  -- { 'github/copilot.vim' },
   -- { 'ThePrimeagen/harpoon' },
+  {
+    "supermaven-inc/supermaven-nvim",
+  },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
