@@ -29,15 +29,6 @@ return { -- Autocompletion
         --  into multiple repos for maintenance purposes.
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
-        {
-            "KadoBOT/cmp-plugins",
-            config = function()
-                require("cmp-plugins").setup({
-                    files = { ".*\\.lua" } -- default
-                    -- files = { "plugins.lua", "some_path/plugins/" } -- Recommended: use static filenames or partial paths
-                })
-            end,
-        },
         "Snikimonkd/cmp-go-pkgs",
         "jcha0713/cmp-tw2css",
         {
@@ -105,7 +96,6 @@ return { -- Autocompletion
                 { name = 'luasnip' },
                 { name = 'path' },
                 { name = 'buffer' },
-                { name = 'plugins' },
                 { name = "go_pkgs" },
                 { name = 'cmp-tw2css' },
                 { name = 'npm',       keyword_length = 4 },
