@@ -59,9 +59,6 @@ vim.o.termguicolors = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`

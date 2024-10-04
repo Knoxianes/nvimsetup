@@ -6,7 +6,7 @@ return {
     require('custom.plugins.lsp'),
     require('custom.plugins.cmp'),
     require('custom.plugins.todo-comments'),
-    --    require('custom.plugins.mini'),
+    require('custom.plugins.mini'),
     require('custom.plugins.treesitter'),
     --    require('custom.plugins.autopairs'),
     --    require('custom.plugins.lint'),
