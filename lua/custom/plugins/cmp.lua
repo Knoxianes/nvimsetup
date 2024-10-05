@@ -52,7 +52,7 @@ return { -- Autocompletion
                     luasnip.lsp_expand(args.body)
                 end,
             },
-            completion = { completeopt = 'menu,menuone,noinsert' },
+            completion = { completeopt = 'menu,menuone,preview,noinsert' },
 
             mapping = cmp.mapping.preset.insert {
                 -- Select the [n]ext item
@@ -103,7 +103,7 @@ return { -- Autocompletion
             },
             matching = { disallow_symbol_nonprefix_matching = false },
         }
-        cmp.setup.filetype({ "sql" }, {
+        cmp.setup.filetype({ 'sql', 'mysql', 'plsql' }, {
             sources = {
                 { name = "vim-dadbod-completion" },
                 { name = "buffer" },

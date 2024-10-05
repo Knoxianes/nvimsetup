@@ -1,8 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Open explorer' })
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -13,9 +13,16 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "i", "v" }, "<C-c>", "<Esc>")
 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "LSP format" })
+vim.keymap.set("n", "<leader>f",
+    function()
+        vim.lsp.buf.format()
+        MiniTrailspace.trim()
+        MiniTrailspace.trim_last_lines()
+    end
+    ,
+    { desc = "LSP format" })
 
-vim.keymap.set("n", "<leader>q", "<cmd>EslintFixAll<CR>", { desc = "LSP format" })
+vim.keymap.set("n", "<leader>q", "<cmd>EslintFixAll<CR>", { desc = "ESLint fix all" })
 
 
 
