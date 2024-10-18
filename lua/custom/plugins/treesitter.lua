@@ -4,8 +4,7 @@ return { -- Highlight, edit, and navigate code
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     opts = {
         ensure_installed = { "javascript", "typescript", "tsx", "c", "lua", "vim", "vimdoc", "html", "python", "go",
-            "css",
-            "json", "sql" },
+            "css", "json", "sql", "http" },
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },

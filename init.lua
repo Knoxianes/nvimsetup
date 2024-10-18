@@ -1,11 +1,11 @@
 require('remap')
 require('set')
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-        vim.cmd("Ex")
-    end,
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     callback = function()
+--         require("oil").open()
+--     end,
+-- })
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 

@@ -21,6 +21,8 @@ return {
     require('custom.plugins.comment'),
     require('custom.plugins.luvit'),
     require('custom.plugins.dadbod'),
+    require("custom.plugins.rest"),
+    require("custom.plugins.oil"),
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
 }
