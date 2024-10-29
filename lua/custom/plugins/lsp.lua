@@ -88,6 +88,8 @@ return {
                 },
             },
             ts_ls = {},
+            prettier = {
+            },
             html = {
                 format = {
                     templating = true,

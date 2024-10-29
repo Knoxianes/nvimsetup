@@ -23,6 +23,8 @@ return {
     require('custom.plugins.dadbod'),
     require("custom.plugins.rest"),
     require("custom.plugins.oil"),
+    require("custom.plugins.start-screen"),
+    require('custom.plugins.conform'),
     'tpope/vim-rhubarb',
     'tpope/vim-sleuth',
 }
