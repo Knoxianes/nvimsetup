@@ -70,3 +70,8 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
+
+
+-- tailwind-fold
+-- vim.o.conceallevel = 2
+-- vim.o.concealcursor = ''
