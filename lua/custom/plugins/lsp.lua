@@ -82,7 +82,7 @@ return {
                 settings = {
                     Lua = {
                         completion = {
-                            callSnippet = 'Replace',
+                            callSnippet = 'Disable',
                         },
                     },
                 },
@@ -118,7 +118,7 @@ return {
                         gofumpt = true,
                         staticcheck = true,
                         completeUnimported = true,
-                        usePlaceholders = true,
+                        usePlaceholders = false,
                         analyses = {
                             unusedparams = true,
                         },
