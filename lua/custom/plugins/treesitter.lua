@@ -4,7 +4,7 @@ return { -- Highlight, edit, and navigate code
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     opts = {
         ensure_installed = { "javascript", "typescript", "tsx", "c", "lua", "vim", "vimdoc", "html", "python", "go",
-            "css", "json", "sql", "http" },
+            "css", "json" },
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
@@ -17,6 +17,13 @@ return { -- Highlight, edit, and navigate code
                 node_decremental = '<m-space>',
             },
         },
+        disable = function(lang, buf)
+            local max_filesize = 100 * 1024 -- 100 KB
+            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+            if ok and stats and stats.size > max_filesize then
+                return true
+            end
+        end,
         textobjects = {
             select = {
                 enable = true,
