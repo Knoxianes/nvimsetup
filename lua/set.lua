@@ -1,4 +1,5 @@
 vim.opt.nu = true
+
 vim.opt.relativenumber = true
 
 vim.g.have_nerd_font = true
@@ -75,11 +76,3 @@ vim.opt.cursorline = true
 -- tailwind-fold
 -- vim.o.conceallevel = 2
 -- vim.o.concealcursor = ''
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern = "*",
-    callback = function()
-        vim.lsp.buf.format()
-        MiniTrailspace.trim()
-        MiniTrailspace.trim_last_lines()
-    end
-})

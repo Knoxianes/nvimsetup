@@ -15,14 +15,13 @@ vim.keymap.set({ "i", "v" }, "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<leader>f",
     function()
-        vim.lsp.buf.format()
         MiniTrailspace.trim()
         MiniTrailspace.trim_last_lines()
     end
     ,
-    { desc = "LSP format" })
+    { desc = "MiniTrailSpace trim" })
 
-vim.keymap.set("n", "<leader>q", "<cmd>EslintFixAll<CR>", { desc = "ESLint fix all" })
+-- vim.keymap.set("n", "<leader>q", "<cmd>EslintFixAll<CR>", { desc = "ESLint fix all" })
 
 
 
