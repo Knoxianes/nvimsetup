@@ -64,3 +64,20 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>', { desc = 'Quick Fix Prev' })
+vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>', { desc = 'Quick Fix Prev' })
+
+
+-- open an close quickfix window on alt q
+vim.keymap.set('n', '<M-q>', function()
+    local winlist = vim.api.nvim_list_wins()
+    for _, winid in ipairs(winlist) do
+        local win = vim.fn.getwininfo(winid)[1]
+        if win.quickfix == 1 then
+            vim.cmd('cclose')
+            return
+        end
+    end
+    vim.cmd('copen')
+end, { desc = 'Quick Fix Open' })
