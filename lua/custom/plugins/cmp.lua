@@ -54,11 +54,11 @@ return { -- Autocompletion
             },
             completion = { completeopt = 'menu,menuone,preview,noinsert' },
 
-            formatting = {
-                format = function(entry, item)
-                    return require("nvim-highlight-colors").format(entry, item)
-                end
-            },
+            -- formatting = {
+            --     format = function(entry, item)
+            --         return require("nvim-highlight-colors").format(entry, item)
+            --     end
+            -- },
 
             mapping = cmp.mapping.preset.insert {
                 -- Select the [n]ext item
