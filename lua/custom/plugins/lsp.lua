@@ -46,9 +46,9 @@ return {
                     vim.api.nvim_create_autocmd('BufWritePre', {
                         buffer = event.buf,
                         callback = function()
-                            MiniTrailspace.trim()
-                            MiniTrailspace.trim_last_lines()
-                            vim.lsp.buf.format({ bufnr = event.buf, id = client.id })
+                            require('mini.trailspace').trim()
+                            require('mini.trailspace').trim_last_lines()
+                            vim.lsp.buf.format({ bufnr = event.buf, id = client.id, async = true })
                         end
                     })
                 end

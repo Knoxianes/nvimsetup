@@ -18,14 +18,14 @@ return {
             pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
             callback = function(args)
                 vim.cmd("EslintFixAll")
-                require("conform").format({ bufnr = args.buf })
+                require("conform").format({ bufnr = args.buf, async = true })
             end,
         })
 
         vim.api.nvim_create_autocmd("BufWritePre", {
             pattern = { "*.css", "*.html", "*.json" },
             callback = function(args)
-                require("conform").format({ bufnr = args.buf })
+                require("conform").format({ bufnr = args.buf, async = true })
             end,
         })
     end,
