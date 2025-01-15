@@ -44,6 +44,7 @@ return {
             },
             trigger = {
                 show_on_keyword = true,
+                show_on_blocked_trigger_characters = { ' ', '\n', '\t', ';', ':', '{', '(', '[', ']', ')', '}', ',' },
 
             },
             menu = {
@@ -71,15 +72,22 @@ return {
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer', "lazydev" },
             providers = {
-                lsp = { fallback_for = { "lazydev" } },
-                lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+                lsp = {
+                    fallback_for = { "lazydev" },
+                    min_keyword_length = 2
+                },
+                lazydev = {
+                    name = "LazyDev",
+                    module = "lazydev.integrations.blink",
+                    min_keyword_length = 2
+                },
                 ripgrep = {
                     module = "blink-ripgrep",
                     name = "Ripgrep",
+                    min_keyword_length = 2,
                     ---@module "blink-ripgrep"
                     ---@type blink-ripgrep.Options
                     opts = {
-
                         prefix_min_len = 3,
                         context_size = 5,
                         max_filesize = "1M",
